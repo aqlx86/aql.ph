@@ -21,7 +21,7 @@
             <blockquote>"I swim againts the current because only dead fish go with the flow."</blockquote>
 
             <ul>
-                <li><a href="http://arnel.labarda.ph" target="blank">photos</a> &middot;</li>
+                <li><a href="https://arnel.labarda.ph" target="blank">photos</a> &middot;</li>
                 <li><a href="https://github.com/aqlx86" target="blank">github</a> &middot;</li>
                 <li><a href="http://ph.linkedin.com/in/aqlx86" target="blank">linkedin</a></li>
             </ul>
