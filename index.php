@@ -23,7 +23,8 @@
             <ul>
                 <li><a href="https://arnel.labarda.ph" target="blank">photos</a> &middot;</li>
                 <li><a href="https://github.com/aqlx86" target="blank">github</a> &middot;</li>
-                <li><a href="http://ph.linkedin.com/in/aqlx86" target="blank">linkedin</a></li>
+                <li><a href="http://ph.linkedin.com/in/aqlx86" target="blank">linkedin</a> &middot;</li>
+                <li><a href="http://www.vultr.com/?ref=7140654" target="blank">vultr</a></li>
             </ul>
         </div>
     </div>
