@@ -23,7 +23,8 @@
                 <li><a href="https://arnel.labarda.ph" target="blank" title='phlog - photo blog'>phlog</a> &middot;</li>
                 <li><a href="https://github.com/aqlx86" target="blank">github</a> &middot;</li>
                 <li><a href="http://ph.linkedin.com/in/aqlx86" target="blank">linkedin</a> &middot;</li>
-                <li><a href="http://www.vultr.com/?ref=7140654" target="blank">vultr</a></li>
+                <li><a href="http://www.vultr.com/?ref=7140654" target="blank">vultr</a> &middot;</li>
+                <li><a href="https://www.youtube.com/channel/UCAR_9h2Enbw78_s5Q_738lA" target="blank">youtube</a></li>
             </ul>
         </div>
     </div>
