@@ -29,11 +29,12 @@ pre { line-height: 100%; }
 
 #wrapper {
 	margin: 100px auto;
-	width: 600px;
+	max-width: 600px;
+	width: 100%;
 }
 
 #content {
-	padding: 5px;	
+	padding: 5px;
     overflow: hidden;
 }
 
@@ -55,7 +56,7 @@ pre { line-height: 100%; }
 p {
 	margin: 5px;
 	font-size: 12px;
-	font-weight: bold;	
+	font-weight: bold;
 }
 
 p span {
@@ -65,11 +66,11 @@ p span {
 }
 
 ul {
-	margin: 5px;	
+	margin: 5px;
 }
 
 ul li {
-	display: inline;	
+	display: inline;
 }
 
 ul#contact {
@@ -78,7 +79,7 @@ ul#contact {
 }
 
 ul#contact li {
-	display: block;	
+	display: block;
 }
 
 a.social {
@@ -88,4 +89,37 @@ a.social {
 
 .line {
 	line-height: 10px;
+}
+
+@media screen and (max-width: 767px) {
+	#image {
+		width: 100%;
+		display: block;
+		margin: 0 auto 20px;
+	}
+
+	#image img {
+		display: block;
+		margin: 0 auto;
+		max-width: 200px;
+		width: 96%;
+	}
+
+	#info blockquote {
+		margin: 0 20px 20px;
+		text-align: center;
+	}
+
+	#info h2 {
+		text-align: center;
+	}
+
+	body {
+		margin: 40px 5px;
+	}
+
+	#info ul {
+		padding-left: 5px;
+		text-align: center;
+	}
 }
