@@ -1,32 +1,38 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
     Identity by HTML5 UP
     html5up.net | @ajlkn
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-    <head>
-        <title>Arnel Q. Labarda</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="Web Aplication Developer, Freelancer. Particularly interested in Open Source Applications" />
-        <link rel="stylesheet" href="/assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+  <head>
+    <title>Arnel Q. Labarda</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Web Application Developer, Freelancer. Particularly interested in Open Source Applications"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="./assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <section id="main">
+        <header>
+          <span class="avatar"><img src="./images/me.jpg" alt="" /></span>
+          <h1>Arnel Q. Labarda</h1>
+          <p>programmer / gamer / rider</p>
+        </header>
 
-        <!-- Wrapper -->
-            <div id="wrapper">
-
-                <!-- Main -->
-                    <section id="main">
-                        <header>
-                            <span class="avatar"><img src="/images/me-inverted.jpg" alt="its me" /></span>
-                            <h1>Arnel Q. Labarda</h1>
-                            <p>programmer / gamer</p>
-                        </header>
-
-                        <!-- <hr />
+        <!-- <hr />
                         <h2>Extra Stuff!</h2>
                         <form method="post" action="#">
                             <div class="fields">
@@ -62,37 +68,85 @@
                         </form>
                         <hr /> -->
 
-                        <footer>
-                            <ul class="icons">
-                                <li><a href="http://ph.linkedin.com/in/aqlx86" class="fa-linkedin">LinkedIn</a></li>
-                                <li><a href="https://github.com/aqlx86" class="fa-github">Github</a></li>
-                                <li><a href="https://paypal.me/aqlx86" class="fa-paypal">Paypal</a></li>
-                                <li><a href="https://www.youtube.com/channel/UCAR_9h2Enbw78_s5Q_738lA?sub_confirmation=1" class="fa-youtube">Youtube</a></li>
-                            </ul>
-                        </footer>
-                    </section>
+        <footer>
+          <ul class="icons">
+            <li>
+              <a
+                href="http://ph.linkedin.com/in/aqlx86"
+                target="_blank"
+                class="fa-linkedin"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/aqlx86"
+                target="_blank"
+                class="fa-github"
+                >Github</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://paypal.me/aqlx86"
+                target="_blank"
+                class="fa-paypal"
+                >Paypal</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@PSKMoto?sub_confirmation=1"
+                target="_blank"
+                class="fa-youtube"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </section>
 
-                <!-- Footer -->
-                    <footer id="footer">
-                    </footer>
-            </div>
+      <!-- Footer -->
+      <footer id="footer"></footer>
+    </div>
 
-        <!-- Scripts -->
-            <script>
-                if ('addEventListener' in window) {
-                    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-                    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-                }
-            </script>
-            <script>
-              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Scripts -->
+    <script>
+      if ("addEventListener" in window) {
+        window.addEventListener("load", function () {
+          document.body.className = document.body.className.replace(
+            /\bis-preload\b/,
+            ""
+          );
+        });
+        document.body.className += navigator.userAgent.match(/(MSIE|rv:11\.0)/)
+          ? " is-ie"
+          : "";
+      }
+    </script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-              ga('create', 'UA-67526894-1', 'auto');
-              ga('send', 'pageview');
-
-            </script>
-    </body>
+      ga("create", "UA-67526894-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>
