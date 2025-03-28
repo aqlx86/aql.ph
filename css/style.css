@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 40px;
+	margin-top: 30px;
+	background-color: #fff;
+	font-family: Monaco, Courier, Mono;
+	font-size: 11px;
+	line-height: 20px;
+	color: #444;
+}
+
+/*
+color: #333;
+background: no-repeat url(//s.ytimg.com/yt/imgbin/www-refreshbg-vflC3wnbM.png) 0 0;
+background-color: #EBEBEB;
+background-repeat: repeat;
+*/
+
+a {
+	color: #444;
+	text-decoration: none;
+	border-bottom: 1px solid #cdcdcd;
+}
+
+a:hover { color: #348cab; }
+
+pre { line-height: 100%; }
+
+#wrapper {
+	margin: 100px auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+#content {
+	padding: 5px;
+    overflow: hidden;
+}
+
+#footer {
+	margin-top: 110px;
+	text-align: center;
+}
+
+#footer p {
+	font-size: 10px;
+	margin: 0;
+}
+
+#image {
+    float: left;
+    margin-right: 30px;
+}
+
+p {
+	margin: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+p span {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+ul {
+	margin: 5px;
+}
+
+ul li {
+	display: inline;
+}
+
+ul#contact {
+	display: none;
+	list-style-type: none;
+}
+
+ul#contact li {
+	display: block;
+}
+
+a.social {
+	border: none;
+	text-decoration: none;
+}
+
+.line {
+	line-height: 10px;
+}
+
+@media screen and (max-width: 767px) {
+	#image {
+		width: 100%;
+		display: block;
+		margin: 0 auto 20px;
+	}
+
+	#image img {
+		display: block;
+		margin: 0 auto;
+		max-width: 200px;
+		width: 96%;
+	}
+
+	#info blockquote {
+		margin: 0 20px 20px;
+		text-align: center;
+	}
+
+	#info h2 {
+		text-align: center;
+	}
+
+	body {
+		margin: 40px 5px;
+	}
+
+	#info ul {
+		padding-left: 5px;
+		text-align: center;
+	}
+}
