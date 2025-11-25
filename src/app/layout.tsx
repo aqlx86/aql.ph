@@ -15,9 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
-      </head>
       <body className="is-preload">
         {children}
         <Script id="preload-script" strategy="afterInteractive">
