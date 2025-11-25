@@ -1,4 +1,4 @@
-# AQL.PH - Next.js Portfolio
+# Personal Site
 
 Personal portfolio website built with Next.js 15.
 
