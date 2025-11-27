@@ -1,37 +1,64 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Script from "next/script";
+import type { Metadata } from "next"
+import "./globals.css"
+import Script from "next/script"
+import { SITE_CONFIG } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "Arnel Q. Labarda",
-  description:
-    "Web Application Developer, Freelancer. Particularly interested in Open Source Applications",
-};
+  title: {
+    default: SITE_CONFIG.name,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  description: SITE_CONFIG.description,
+  keywords: [
+    "web developer",
+    "freelancer",
+    "programmer",
+    "react developer",
+    "next.js developer",
+    "javascript developer",
+    "open source",
+  ],
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_CONFIG.url,
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="is-preload">
-        {children}
-        <Script id="preload-script" strategy="afterInteractive">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script id="theme-init" strategy="beforeInteractive">
           {`
-            if ("addEventListener" in window) {
-              window.addEventListener("load", function () {
-                document.body.className = document.body.className.replace(
-                  /\\bis-preload\\b/,
-                  ""
-                );
-              });
-              document.body.className += navigator.userAgent.match(/(MSIE|rv:11\\.0)/)
-                ? " is-ie"
-                : "";
-            }
+            (function() {
+              const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+              document.documentElement.classList.toggle('dark', theme === 'dark');
+            })();
           `}
         </Script>
+      </head>
+      <body className="antialiased">
+        {children}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=UA-67526894-1"
           strategy="afterInteractive"
@@ -46,5 +73,5 @@ export default function RootLayout({
         </Script>
       </body>
     </html>
-  );
+  )
 }
