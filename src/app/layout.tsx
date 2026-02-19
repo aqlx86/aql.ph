@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
+import { TooltipProvider } from "@/components/ui/8bit/tooltip";
 
 export const metadata: Metadata = {
   title: "Arnel Q. Labarda",
@@ -14,24 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="is-preload">
-        {children}
-        <Script id="preload-script" strategy="afterInteractive">
-          {`
-            if ("addEventListener" in window) {
-              window.addEventListener("load", function () {
-                document.body.className = document.body.className.replace(
-                  /\\bis-preload\\b/,
-                  ""
-                );
-              });
-              document.body.className += navigator.userAgent.match(/(MSIE|rv:11\\.0)/)
-                ? " is-ie"
-                : "";
-            }
-          `}
-        </Script>
+    <html lang="en" className="dark">
+      <body className="min-h-screen antialiased">
+        <TooltipProvider>{children}</TooltipProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=UA-67526894-1"
           strategy="afterInteractive"

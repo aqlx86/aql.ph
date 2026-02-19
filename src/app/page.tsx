@@ -1,69 +1,87 @@
-import Image from "next/image";
+import { Linkedin, Github, DollarSign, Youtube } from "lucide-react";
+
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/8bit/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/8bit/avatar";
+import { Badge } from "@/components/ui/8bit/badge";
+import { Button } from "@/components/ui/8bit/button";
+import { Separator } from "@/components/ui/8bit/separator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/8bit/tooltip";
+
+const socialLinks = [
+  {
+    href: "http://ph.linkedin.com/in/aqlx86",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
+  {
+    href: "https://github.com/aqlx86",
+    label: "Github",
+    icon: Github,
+  },
+  {
+    href: "https://paypal.me/aqlx86",
+    label: "Paypal",
+    icon: DollarSign,
+  },
+  {
+    href: "https://www.youtube.com/@PSKMoto?sub_confirmation=1",
+    label: "Youtube",
+    icon: Youtube,
+  },
+];
 
 export default function Home() {
   return (
-    <div id="wrapper">
-      <section id="main">
-        <header>
-          <span className="avatar">
-            <Image
-              src="/images/me.jpg"
-              alt="Arnel Q. Labarda"
-              width={200}
-              height={200}
-            />
-          </span>
-          <h1>Arnel Q. Labarda</h1>
-          <p>programmer / gamer / rider</p>
-        </header>
+    <main className="flex min-h-screen items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader className="flex flex-col items-center gap-4 text-center">
+          <Avatar className="size-32">
+            <AvatarImage src="/images/me.jpg" alt="Arnel Q. Labarda" />
+            <AvatarFallback>AQL</AvatarFallback>
+          </Avatar>
+          <h1 className="retro text-lg">Arnel Q. Labarda</h1>
+        </CardHeader>
 
-        <footer>
-          <ul className="icons">
-            <li>
-              <a
-                href="http://ph.linkedin.com/in/aqlx86"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fa-linkedin"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/aqlx86"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fa-github"
-              >
-                Github
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://paypal.me/aqlx86"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fa-paypal"
-              >
-                Paypal
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/@PSKMoto?sub_confirmation=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fa-youtube"
-              >
-                Youtube
-              </a>
-            </li>
-          </ul>
-        </footer>
-      </section>
+        <CardContent className="flex flex-col items-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Badge variant="secondary">programmer</Badge>
+            <Badge variant="secondary">gamer</Badge>
+            <Badge variant="secondary">rider</Badge>
+          </div>
+          <Separator className="my-2" />
+        </CardContent>
 
-      <footer id="footer"></footer>
-    </div>
+        <CardFooter className="flex justify-center gap-2">
+          {socialLinks.map((link) => (
+            <Tooltip key={link.label}>
+              <TooltipTrigger>
+                <Button variant="outline" size="icon" asChild>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                  >
+                    <link.icon className="size-4" />
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{link.label}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </CardFooter>
+      </Card>
+    </main>
   );
 }
