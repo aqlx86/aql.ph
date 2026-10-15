@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-const mono = JetBrains_Mono({
+const crt = VT323({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-const sans = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-sans",
+  weight: "400",
+  variable: "--font-crt",
   display: "swap",
 });
 
@@ -24,10 +17,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f5f2" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0b" },
-  ],
+  themeColor: "#050a06",
 };
 
 export default function RootLayout({
@@ -36,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${mono.variable} ${sans.variable}`}>
+    <html lang="en" className={crt.variable}>
       <body>
         {children}
         <Script
