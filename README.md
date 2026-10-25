@@ -4,6 +4,9 @@ Personal portfolio website built with Next.js 15.
 
 ## Getting Started
 
+<img width="689" height="722" alt="Screenshot 2026-10-25 at 11 44 02 AM" src="https://github.com/user-attachments/assets/d92e8745-23d6-4134-8098-667bd5632a1b" />
+
+
 ### Prerequisites
 
 - Node.js 18.18.0 or higher (using nvm recommended)
